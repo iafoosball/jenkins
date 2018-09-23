@@ -5,8 +5,8 @@ services:
     container_name: jenkins
     user: jenkins
     volumes:
-      - /data/jenkins:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/jenkins:/var/jenkins_home
+      - /var/lib/jenkins/run/docker.sock:/var/run/docker.sock
     environment:
       JENKINS_HOST_HOME: "/data/jenkins"
     ports:

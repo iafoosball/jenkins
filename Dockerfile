@@ -9,4 +9,4 @@ RUN apt-key fingerprint 0EBFCD88
 RUN add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable'
 
 # Install compose
-RUN apt install docker-compose
+RUN apt install -y docker-compose

@@ -7,6 +7,8 @@ RUN curl -sSL https://get.docker.com/ | sh
 
 RUN usermod -a -G staff,docker jenkins
 
+RUN apt install docker-compose
+
 #
 #RUN apt-get update && \
 #apt-get install -qy \

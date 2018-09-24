@@ -8,7 +8,9 @@ services:
     user: jenkins
     volumes:
       - /var/lib/jenkins:/var/jenkins_home
-      - /var/lib/jenkins/run/docker.sock:/var/run/docker.sock
+      - /var/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+      - /usr/bin/docker-compose:/usr/bin/docker-compose
     environment:
       JENKINS_HOST_HOME: "/data/jenkins"
     ports:

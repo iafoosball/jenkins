@@ -2,6 +2,7 @@ version: '2'
 services:
   jenkins:
     build: .
+    image: jenkins/jenkins
     container_name: jenkins
 #    command: >
 #      bash -c "curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"

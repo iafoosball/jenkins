@@ -42,3 +42,6 @@ RUN apt install -y docker-ce
 
 # Install compose
 RUN apt install -y docker-compose
+
+# add jenkins to docker group
+RUN groupmod -g 1026 docker && gpasswd -a jenkins docker

@@ -4,14 +4,14 @@ services:
     build: './'
     container_name: jenkins
 #    command: chmod 777 /var/run/docker.sock
-    user: jenkins
+#    user: jenkins
     volumes:
       - $PWD/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
 #      - /usr/bin/docker:/usr/bin/docker
 #      - /usr/bin/docker-compose:/usr/bin/docker-compose
-    environment:
-      JENKINS_HOST_HOME: "/data/jenkins"
+#    environment:
+#      JENKINS_HOST_HOME: "/data/jenkins"
     ports:
       - "8030:8080"
       - "4040:4040"

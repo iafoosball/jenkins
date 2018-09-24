@@ -1,5 +1,5 @@
 FROM jenkins
-USER jenkins
+USER root
 
 # Install docker
 RUN apt-get update

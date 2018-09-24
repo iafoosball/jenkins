@@ -47,8 +47,10 @@ RUN apt install -y docker-compose
 RUN usermod -aG docker jenkins
 
 #set permission to docker
-RUN ls /var/run/
+RUN docker -v
+VOLUME /var/run/docker.sock
 RUN chmod 777 /var/run/docker.sock
 
-RUN docker -v
+
+
 USER jenkins

@@ -3,12 +3,11 @@ services:
   jenkins:
     build: './'
     container_name: jenkins
-#    command: >
-#      bash -c "curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+#    command: chmod 777 /var/run/docker.sock
     user: jenkins
     volumes:
       - /var/lib/jenkins:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
+#      - /var/run/docker.sock:/var/run/docker.sock
 #      - /usr/bin/docker:/usr/bin/docker
 #      - /usr/bin/docker-compose:/usr/bin/docker-compose
     environment:

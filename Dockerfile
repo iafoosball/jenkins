@@ -45,5 +45,6 @@ RUN apt install -y docker-compose
 
 # add jenkins to docker group
 RUN usermod -aG docker jenkins
+
 RUN docker -v
 USER jenkins
